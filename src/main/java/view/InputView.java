@@ -11,6 +11,7 @@ public class InputView {
 
     Scanner input = new Scanner(System.in);
 
+
     public String inputMessage(){
         System.out.print(COMMAND_MESSAGE);
         return input.nextLine();
