@@ -26,5 +26,9 @@ public class InputView {
         return input.nextLine();
     }
 
+    public String delete(){
+        return input.nextLine();
+    }
+
 
 }

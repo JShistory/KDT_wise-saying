@@ -12,6 +12,15 @@ public class WiseSaying {
         wise_Saying = new HashMap<>();
         number = 0;
     }
+    public boolean deleteData(int key){
+
+        if(wise_Saying.containsKey(key) == false){
+            return false;
+        }
+        wise_Saying.remove(key);
+        return true;
+
+    }
     public void inputData(String wiseSaying, String author){
         number++;
         data = new ArrayList<>();
@@ -20,16 +29,8 @@ public class WiseSaying {
         wise_Saying.put(number, data);
 
     }
-    public ArrayList<String> getWise_Saying(){
-        data = new ArrayList<>();
-        for(int i=0; i<number; i++){
-            data.add(String.valueOf(i));
-            String wiseSaying = wise_Saying.get(i).get(0);
-            String author = wise_Saying.get(i).get(1);
-            data.add(wiseSaying);
-            data.add(author);
-        }
-        return data;
+    public HashMap<Integer, List<String>> getWise_Saying(){
+        return wise_Saying;
     }
     public int getNumber(){
         return number;
