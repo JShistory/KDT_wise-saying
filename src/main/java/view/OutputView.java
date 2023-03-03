@@ -1,6 +1,5 @@
 package view;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -12,6 +11,7 @@ public class OutputView {
     private final String LIST_DATA = "%d / %s / %s \n";
     private final String AUTHOR = "작가(기존) %s\n";
     private final String WISE_SAYING = "명언(기존) %s \n";
+
 
     public void printAuthor(String author){
         System.out.printf(AUTHOR, author);

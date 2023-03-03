@@ -3,15 +3,16 @@ package domain;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import ll.wisesaying.service.WiseSayingService;
 
 public class WiseSaying {
-    private HashMap<Integer, List<String>> wise_Saying;
+    private HashMap<Integer, List<String>> wise_Saying = new HashMap<>();
     private ArrayList<String> data;
-    private int number;
+    private int number = 0;
+    WiseSayingService wiseSayingService;
 
     public WiseSaying() {
-        wise_Saying = new HashMap<>();
-        number = 0;
+        wiseSayingService = new WiseSayingService();
     }
     public boolean check_key(int key){
         if (wise_Saying.containsKey(key) == false) {
